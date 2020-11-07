@@ -1,9 +1,12 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	. "github.com/VitalyDorozhkin/lem_in_go/datastruct"
+	"log"
 	"math"
+	"os"
 )
 
 /*
@@ -17,7 +20,11 @@ import (
 */
 
 func main() {
-	graph := NewGraph().
+	graph := NewGraph()
+
+
+	return
+	graph.
 		Link(0, 1, 2, 3).
 		Link(1, 4).
 		Link(2, 5).
@@ -26,6 +33,15 @@ func main() {
 		Link(5, 7).
 		Link(6, 7).
 		Link(7, 0)
+
+	graph.Nodes[0].X, graph.Nodes[0].Y = 15, 127
+	graph.Nodes[1].X, graph.Nodes[1].Y = 31, 63
+	graph.Nodes[2].X, graph.Nodes[2].Y = 31, 127
+	graph.Nodes[3].X, graph.Nodes[3].Y = 31, 191
+	graph.Nodes[4].X, graph.Nodes[4].Y = 63, 63
+	graph.Nodes[5].X, graph.Nodes[5].Y = 63, 127
+	graph.Nodes[6].X, graph.Nodes[6].Y = 63, 191
+	graph.Nodes[7].X, graph.Nodes[7].Y = 95, 239
 
 	println("Simple Ford Bellman")
 	solve(*graph, 0)

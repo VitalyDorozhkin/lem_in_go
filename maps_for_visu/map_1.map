@@ -1,0 +1,40 @@
+30
+##start
+A 0 4
+B 2 2
+C 4 0
+D 6 0
+E 8 2
+##end
+F 10 4
+G 8 6
+H 6 8
+I 4 8
+J 2 6
+K 4 5
+N 4 3
+M 0 0
+R 10 8
+#WAY1
+A-M
+M-C
+C-D
+D-E
+E-F
+#WAY2
+A-B
+B-N
+N-K
+K-G
+G-F
+#WAY3
+A-J
+J-I
+I-H
+H-R
+R-F
+#ADD_LINKS
+B-C
+N-E
+J-K
+H-G
